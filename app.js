@@ -8,6 +8,7 @@ const {
 } = require('./controllers/parks');
 
 const app = express();
+app.use(express.json());
 
 app.get('/api/parks', getParks);
 app.post('/api/parks', postPark);
